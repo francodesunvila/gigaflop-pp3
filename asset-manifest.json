@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/gigaflop-pp3-app-react/static/css/main.42d44c68.css",
-    "main.js": "/gigaflop-pp3-app-react/static/js/main.fa5570e6.js",
+    "main.js": "/gigaflop-pp3-app-react/static/js/main.d50f46ad.js",
     "index.html": "/gigaflop-pp3-app-react/index.html",
     "main.42d44c68.css.map": "/gigaflop-pp3-app-react/static/css/main.42d44c68.css.map",
-    "main.fa5570e6.js.map": "/gigaflop-pp3-app-react/static/js/main.fa5570e6.js.map"
+    "main.d50f46ad.js.map": "/gigaflop-pp3-app-react/static/js/main.d50f46ad.js.map"
   },
   "entrypoints": [
     "static/css/main.42d44c68.css",
-    "static/js/main.fa5570e6.js"
+    "static/js/main.d50f46ad.js"
   ]
 }
