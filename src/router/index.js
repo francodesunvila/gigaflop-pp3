@@ -17,4 +17,4 @@ export const router = createBrowserRouter([
                 
         },
         
-])
+], { basename: '/gigaflop-pp3-app-react' }); 
