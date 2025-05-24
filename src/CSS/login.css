@@ -6,7 +6,7 @@ html, body { /* Aseguramos que html y body ocupen el 100% del viewport */
 }
 
 .background-container {
-  background-color: #4285f4;
+  background-image: linear-gradient(to right, white,white,white,#a7a7b19c,#7e7c7c,black);
   display: flex;
   justify-content: center; /* Centra horizontalmente el contenido */
   align-items: center; /* Centra verticalmente el contenido */
@@ -17,9 +17,14 @@ html, body { /* Aseguramos que html y body ocupen el 100% del viewport */
 .loginbox {
   background-color: white;
   margin: 25px;
-  border-radius: 30px;
+  border-radius: 7px;
   height: 450px;
-  box-shadow: 3px 3px #d9d9d9;
+  /* Sombra superior */
+  box-shadow: 
+    0 -7px 5px -5px #d9d9d9, /* Sombra hacia arriba */
+    -7px 0 20px -5px #d9d9d9, /* Sombra hacia la izquierda */
+    0 7px 5px -5px #d9d9d9,  /* Sombra hacia abajo */
+    7px 0 20px -5px #4285f4; /* Sombra hacia la derecha */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,20 +78,20 @@ input:hover {
 .login-button {
   height: 45px;
   border-radius: 5px;
-  background-color: #239f65;
+  background-color: #4285f4;
   border: 1px solid #d9d9d9;
   padding: 10px 5px;
   color: white;
   width: 45%;
   margin-top: 30px;
-  box-shadow: 3px 3px #d9d9d9;
+  box-shadow: 5px 5px 15px #c1c1c5;
   cursor: pointer;
   font-weight: bold;
 }
 
 .login-button:hover {
-  background-color: #1e8449;
-  box-shadow: 4px 4px #c0c0c0;
+  background-color: #000000;
+  box-shadow: 4px 4px 7px #4285f4;
   transform: translateY(-2px);
   transition: all 0.3s ease;
 }
