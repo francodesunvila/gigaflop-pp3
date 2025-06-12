@@ -175,7 +175,7 @@
 }
 
 .menu-superior{
-  box-shadow: 0px 5px 5px rgb(243, 232, 232);
+  box-shadow: 0px 5px 5px #d9e2f1;
   
   height: 5vw;
   width: 100%;
@@ -236,16 +236,22 @@
   justify-content: space-around;
   
 }
+.filtros-box{
+  margin-right: 70px;
+}
 
-.matriz{
-  border: 1px solid #c0c0c0;
+.matriz {
+  border: 1px solid #e9e6f3;
   height: 80%;
   margin-top: 30px;
-  border-radius: 10px;
-  overflow: auto;
-  box-shadow: 0px 0px 10px rgba(202, 189, 189, 0.7);
-
+  border-radius: 3px;
+  overflow-y: auto; /* Asegurar scroll vertical */
+  box-shadow: 0px 0px 15px #dadada;
+  scroll-snap-type: y mandatory; /* Activa el desplazamiento escalonado */
+  overflow-y: scroll;
+  
 }
+
 .aprobada {
   color: green;
 }
@@ -257,167 +263,136 @@
 .rechazada {
   color: red;
 }
-.table-datos:hover{
-  background-color: #f0f0f0;
+.table-trdatos:hover td {
+  background: #ebf2fc;
   cursor: pointer;
-  transition: all 0.3s ease;
+  color: #4285f4;
+      
+  height: 5vw;
+  transition: background-color 0.3s ease, color 0.3s ease;
+
 }
+/*encabezado de la tabla*/
+.table-tr th {
+  /*background-color: #ebf2fc;*/
+  position: sticky;
+  height: 2vw;
+  top: 0;
+  z-index: 10;
+background: #f5f4f7;
 
-
-/*
-.table-tr{
-  border: 3px solid rgb(0, 0, 0);
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  
 }
 
 .table-thead{
- border: 3px solid red;
- width: 100%;
+  
+}
+
+
+thead { /*lineas debajo del encabezado*/
+  position: sticky;
+  top: 0;
+  background-color: #d6d6d6;
+  z-index: 100;
+  outline: 0.5px solid #e9e6f3;
+  padding-bottom: 0;
+  height: 40px; /* Ajusta según el tamaño del encabezado */
+  
+}
+thead::after {
+  content: "";
+  display: block;
+  height: 2px; /* Grosor del borde */
+  background-color: #e9e6f3;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* Contenedor de la tabla */
+.table-trdatos {
+  overflow-y: auto; /* Scroll vertical */
+  max-height: 500px; /* Ajusta según necesites */
+  scroll-snap-type: y mandatory; /* Activamos el scroll escalonado en eje Y */
+  
+}
+
+/* Filas de la tabla */
+tr {
+  scroll-snap-align: start; /* Cada fila se alinea al inicio */
+}
+
+.table{
+
+  margin-top: 130px;
+  
+}
+/*lineas de filas*/
+.table-trdatos {
+  border-bottom: 1px solid #e7e7e7;
+}
+/* Estilos generales para los iconos */
+.bi-pencil-fill,
+.bi-file-earmark-arrow-down-fill,
+.bi-trash3-fill,
+.bi-eye-fill {
+    background-color: transparent !important;
+    margin: 5px;
+    display: none;
+    color: black; /* Color inicial */
+}
+
+/* Mostrar los iconos solo cuando el mouse está sobre la fila */
+tr:hover .bi-pencil-fill,
+tr:hover .bi-file-earmark-arrow-down-fill,
+tr:hover .bi-trash3-fill,
+tr:hover .bi-eye-fill {
+    display: inline-block; /* O el tipo de display que prefieras */
+}
+
+/* Cambiar color solo cuando el usuario pasa sobre el icono */
+.bi-pencil-fill:hover,
+.bi-file-earmark-arrow-down-fill:hover,
+.bi-trash3-fill:hover,
+.bi-eye-fill:hover {
+    cursor: pointer;
+    color: #4285f4; /* Color al hacer hover */
+}
+.table-datostotal{
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: 5vw;
+  border-bottom: transparent;
+}
+.crud-icons{
+  
  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3vw;
+  width: 50%;
+  background-color: transparent !important;
+}
+
+.crud-icons_hover {
+  background-color: transparent !important;
+  color: white !important;
+}
+.table-datos,
+.table-header {
+  text-align: center; /* Asegura que todo el texto esté centrado */
+  vertical-align: middle; /* Centra verticalmente el contenido */             
+}
+
+tbody {
+  margin-top: 40px; /* Da espacio debajo del encabezado */
   
-}*/
+}
+.table-header-total{
+  width: 22%;
+  margin-bottom: 20px;
+}
 
-
-/*
-
-  .container-header {
-    width: 65%;
-    margin-left: 450px;
-  }
-
-  
-
-
-
-
-
-      /*Fin de Menù lateral*/
-
-  /*
-    .background-container-menu {
-        background-color: #4285f4;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 100vh;
-      }
-      .container-header{
-        display: flex;
-        width: 65%;
-        justify-content: space-between;
-        margin-left: 450px;
-      }
-      .title-menu {
-        color: white;
-        font-size: 85px;
-        text-shadow: 3px 5px #645e5e9c;
-        font-weight: bold;
-        width: 100%;
-      }
-      .menubox{
-        background-color: white;
-        width: 65%;
-        margin: 25px;
-        border-radius: 30px;
-        height: 450px;
-        box-shadow: 3px 3px #d9d9d9;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-      }
-      .menu-container{
-        display: flex;
-        
-        width: 70%;
-        margin: 10px;
-        align-items: center;
-        height: 300px;
-        padding: 20px;
-        
-        margin-top: 150px;
-        
-      }
-      
-    .custom-icon{
-      color: white;
-      font-size: 50px;
-      margin-right: 20px;
-      margin-top: 10px;
-    } 
-    
-    .custom-icon:hover{
-      cursor: pointer;
-      color: #000000;
-      font-size: 53px;
-      transition: all 0.3s ease;
-    }
-      .menu-button{
-        height: 130px;
-        margin: 10px;
-        border-radius: 5px;
-        background-color: #4285f4;
-        border: 3px solid #4285f4;
-        padding: 10px;
-        color: white;
-        width: 90%;
-        padding: 5px;
-        
-        box-shadow: 3px 3px #d9d9d9;
-        cursor: pointer; 
-        font-weight: bold;
-        
-      }
-    
-      .menu-button:hover {
-        background-color: #000000; 
-        box-shadow: 0px 5px #c0c0c0; 
-        transform: translateY(-2px); 
-        transition: all 0.3s ease; 
-      }
-      .logout-container{
-        height: 50px;
-        width: 150px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        margin-left: 600px;
-        
-      }
-      .logout-button{
-        display: block;
-        height: 45px;
-        margin: 10px;
-        border-radius: 5px;
-        background-color: rgb(187, 7, 7);
-        border: 1px solid #d9d9d9;
-        padding: 10px;
-        color: white;
-        width: 120px;
-        padding: 5px;
-        margin-bottom: 40px;
-        margin-left: 50px;
-        
-        box-shadow: 3px 3px #d9d9d9;
-        cursor: pointer;
-        font-weight: bold;
-        
-      }
-      
-      .logout-button:hover {
-        background-color: #700404; 
-        box-shadow: 4px 4px #c0c0c0; 
-        transform: translateY(-2px); 
-        transition: all 0.3s ease; 
-      
-      }*/
-      

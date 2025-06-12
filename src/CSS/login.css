@@ -17,8 +17,9 @@ html, body { /* Aseguramos que html y body ocupen el 100% del viewport */
 .loginbox {
   background-color: white;
   margin: 25px;
-  border-radius: 7px;
-  height: 450px;
+  padding: 20px;
+  border-radius: 5px;
+  height: 400px;
   /* Sombra superior */
   box-shadow: 
     0 -7px 5px -5px #d9d9d9, /* Sombra hacia arriba */
@@ -102,7 +103,7 @@ input:hover {
      ya debería ser 100% por los estilos base */
 
   .loginbox {
-    width: 750px;
+    width: 45%;
     justify-content: center;
   }
 

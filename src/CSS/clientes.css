@@ -1,0 +1,16 @@
+.buscador{
+    width: 40%;
+    height: 2.5vw;
+    border-radius: 5px;
+
+    
+  
+}
+.filtros{
+    margin-left: 20px ;
+    height: 3vw;
+    display: flex;
+    justify-content: start;
+    align-content: center;
+    align-items: center;
+}

@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import '../CSS/menu.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
+import Sidebar from '../components/Sidebar';
+
 
 const Menu = () => {
-  const navigate = useNavigate();
-  const handleLogout = () => {
-    navigate('/');
-  };
+ 
 
   const [searchTerm, setSearchTerm] = useState({
     id: '',
@@ -63,17 +63,7 @@ const Menu = () => {
 
   return (
     <>
-      <input type="checkbox" id="btn-menu" />
-      <div className="container-menu">
-        <div className="cont-menu">
-          <nav>
-            <h5 className='nombre-sidebar'>Nombre y apellido</h5>
-            <a href="#">Mi Perfil</a>
-            <a href="#" onClick={handleLogout}>Cerrar Sesión</a>
-          </nav>
-          <label htmlFor="btn-menu">✖️</label>
-        </div>
-      </div>
+      <Sidebar />
       <div className="background-container-menu">
         <header className="header">
           <div className='container-header'>
@@ -87,7 +77,7 @@ const Menu = () => {
         </header>
         <div className='option'>
           <NavLink className='option-button2'>Cotizaciones</NavLink>
-          <NavLink className='option-button'>Clientes</NavLink>
+          <NavLink className='option-button' to= "/clientes">Clientes</NavLink>
           <NavLink className='option-button'>Catálogo</NavLink>
           <NavLink className='option-button'>Configuración</NavLink>
         </div>
@@ -119,12 +109,12 @@ const Menu = () => {
                     <th className='table-header'>Vendedor</th>
                     <th className='table-header'>Estado</th>
                     <th className='table-header'>Cliente</th>
-                    <th className='table-header'>Total</th>
+                    <th className='table-header-total'>Total</th>
                   </tr>
                 </thead>
                 <tbody className='table'>
                   {filteredCotizaciones.map((cotizacion, index) => (
-                    <tr key={index} className='table-tr'>
+                    <tr key={index} className='table-trdatos'>
                       <td className='table-datos'>{cotizacion.id}</td>
                       <td className='table-datos'>{cotizacion.fecha}</td>
                       <td className='table-datos'>{cotizacion.vendedor}</td>
@@ -133,7 +123,17 @@ const Menu = () => {
                       {cotizacion.estado}</td>
 
                       <td className='table-datos'>{cotizacion.cliente}</td>
-                      <td className='table-datos'>{cotizacion.total}</td>
+                      <td className='table-datostotal'>{cotizacion.total}
+                        <div className='crud-icons'>   
+                        <i className="bi bi-eye-fill"></i>  
+                        <i className="bi bi-pencil-fill"></i>
+                        <i className="bi bi-file-earmark-arrow-down-fill"></i>
+                        <i className="bi bi-trash3-fill"></i>                  
+                        </div> 
+                      </td>
+                      
+                        
+                      
                     </tr>
                   ))}
                 </tbody>
