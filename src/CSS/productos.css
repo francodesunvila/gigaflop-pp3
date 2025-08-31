@@ -12,6 +12,10 @@
   transition: all 0.3s ease;
 }
 
+
+
+
+
 .btn-menu {
   display: none;
 }
@@ -82,14 +86,14 @@
   font-size: 18px;
 }
 
-.background-container-menu {
+.background-container-prod {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: center; /* Centra verticalmente los elementos */
   align-items: center;
   width: 100%;
-  height: 100vh; /* Aseguramos que ocupe toda la altura */
+  height: 18vh; /* Aseguramos que ocupe toda la altura */
   padding-top: 70px; /* Para no quedar debajo del header fijo */
  
 
@@ -108,7 +112,7 @@
   font-weight: bold;
   
 }
-.header {
+.headerprod {
   width: 100%;
   height: 5vw;
   position: fixed;
@@ -131,13 +135,14 @@
 
 }
 
-.option{
+.optionprod{
   background-color: white;
   width: 100%;
   height: 4vw;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  align-content: center;
   margin-top: -2px;
   border-top: 1px solid #a7a7b19c;
   
@@ -146,6 +151,7 @@
   color: #000000;
   text-decoration: none;
   font-weight: bold;
+  text-align: center;
 }
 .option-button2{
   color: #4285f4;
@@ -157,12 +163,12 @@
   font-weight: bold;
 }
 
-.menubox {
+.menuboxprod {
   background-color: rgb(255, 255, 255);
   width: 100%;
-  
+
   top:0;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -391,4 +397,3 @@ tbody {
   width: 22%;
   margin-bottom: 20px;
 }
-

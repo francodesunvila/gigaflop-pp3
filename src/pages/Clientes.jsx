@@ -67,8 +67,8 @@ const Clientes = () => {
         <div className='option'>
           <NavLink className='option-button'to= '/menu'>Cotizaciones</NavLink>
           <NavLink className='option-button2'>Clientes</NavLink>
-          <NavLink className='option-button' >Catálogo</NavLink>
-          <NavLink className='option-button'>Configuración</NavLink>
+          <NavLink className='option-button' to= '/productos' >Productos</NavLink>
+          <NavLink className='option-button'to= '/configuracion'>Configuración</NavLink>
         </div>
         {/* MODAL DE REGISTRO - Se renderiza condicionalmente */}
                 {showRegisterForm && (

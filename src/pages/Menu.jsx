@@ -78,8 +78,8 @@ const Menu = () => {
         <div className='option'>
           <NavLink className='option-button2'>Cotizaciones</NavLink>
           <NavLink className='option-button' to= "/clientes">Clientes</NavLink>
-          <NavLink className='option-button'>Catálogo</NavLink>
-          <NavLink className='option-button'>Configuración</NavLink>
+          <NavLink className='option-button' to= '/productos' >Productos</NavLink>
+          <NavLink className='option-button'to= '/configuracion'>Configuración</NavLink>
         </div>
         <div className="menubox">
           <div className='menu-superior'>

@@ -1,0 +1,114 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');*/
+
+body {
+  /* Asegura que el body tenga al menos la altura del viewport */
+  min-height: 100vh; /* `vh` significa "viewport height" (altura del área visible del navegador) */
+  /* Permite el scroll vertical si el contenido excede la altura */
+  overflow-y: auto;
+  /* Opcional: mejora el rendimiento del scroll en iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+.header-home {
+  background-color: #4285f4;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+
+}
+.login-home:hover {
+ color: #000000; /* Cambia el color al pasar el mouse */
+  cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
+  transform: rotate(2deg); /* Añade un ligero giro al pasar el mouse */
+  transition: transform 0.3s ease, color 0.3s ease; /* Añade una transición suave */
+
+}
+
+.title-home {
+  font-size: 2em;
+  margin: 0;
+
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.main-content {
+  background-image: linear-gradient(to right, white, white, white, #a7a7b19c, #7e7c7c, black);
+  color: #333;
+  padding: 40px 20px;
+  min-height: 60vh;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.hero h2 {
+  color: #4285f4;
+  font-size: 2em;
+}
+
+.about-section {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px #c1c1c5;
+}
+
+.footer-home {
+background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  /* CAMBIO CLAVE AQUÍ */
+  min-height: 21.5vh; /* El footer tendrá al menos esta altura, pero puede crecer */
+  align-items: center;
+  align-content: center;
+  /* Si la página completa necesita scroll, asegúrate de que el body/html lo permita */
+  /* Revisa la configuración del body/html que te di antes */
+}
+
+.footer .socials a {
+  color: #4285f4;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer .socials a:hover {
+  text-decoration: underline;
+}
+.footer-content{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+
+}
+.footer-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.redes {
+margin-right: 20px;
+}
+.contacto-home{
+    margin: 20px;
+}
