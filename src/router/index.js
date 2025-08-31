@@ -5,6 +5,7 @@ import Clientes from "../pages/Clientes";
 import Home from "../pages/Home";
 import Productos from "../pages/Productos";
 import Configuracion from "../pages/Configuracion";
+import NuevaCotizacion from "../pages/NuevaCotizacion";
 
 
 
@@ -41,5 +42,11 @@ export const router = createBrowserRouter([
         element: <Configuracion/>,
                         
         },
+        {
+        path: '/nuevacotizacion',
+        element: <NuevaCotizacion/>,
+                        
+        },
+        
         
 ], { basename: '/gigaflop-pp3-app-react' }); 

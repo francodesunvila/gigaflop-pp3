@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import '../CSS/configuracion.css';
 import Sidebar from '../components/Sidebar';
-import Register from '../components/Register';
+import RegisterUser from '../components/RegisterUser';
 
 const Configuracion = () => {
 
@@ -63,7 +63,7 @@ const usuario = [
                     <div className="register-modal-overlay" onClick={() => setShowRegisterForm(false)}>
                         <div className="register-modal-content" onClick={(e) => e.stopPropagation()}>
                             {/* Pasamos la función para cerrar al componente Register */}
-                            <Register onClose={() => setShowRegisterForm(false)} />
+                            <RegisterUser onClose={() => setShowRegisterForm(false)} />
                         </div>
                     </div>
                 )}
@@ -74,7 +74,7 @@ const usuario = [
             </div>
             <div>
             
-              <button className='nc' onClick={() => setShowRegisterForm(true)}>+ Nuevo Usuario</button>
+              <button className='nc-config' onClick={() => setShowRegisterForm(true)}>+ Nuevo Usuario</button>
             </div>
           </div>
 

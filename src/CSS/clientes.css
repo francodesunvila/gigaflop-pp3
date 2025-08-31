@@ -24,3 +24,18 @@
     border: none;
     cursor: pointer;
 }
+
+.nc-cliente{
+ border-radius: 3px;
+  background-image: linear-gradient(to right,#4285f4, blue,#4285f4);
+  color: white;
+  border-color: #4285f4;
+  box-shadow: 0px 0px 10px rgba(202, 189, 189, 0.7);
+}
+.nc-cliente:hover{
+  background: #000000;
+  border-color: black;
+  box-shadow: 2px 2px #c0c0c0;
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}

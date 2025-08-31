@@ -88,7 +88,7 @@ const Menu = () => {
             </div>
             <div>
               <button className='reporte'>Reporte</button>
-              <button className='nc'>+ Nueva Cotización</button>
+              <NavLink className='nc' to='/nuevacotizacion'>+ Nueva Cotización</NavLink>
             </div>
           </div>
           <div className="menu-matriz">

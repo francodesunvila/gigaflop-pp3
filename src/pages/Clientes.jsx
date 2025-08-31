@@ -86,7 +86,7 @@ const Clientes = () => {
             </div>
             <div>
               <button className='reporte'>Reporte</button>
-              <button className='nc' onClick={() => setShowRegisterForm(true)}>+ Nuevo Cliente</button>
+              <button className='nc-cliente' onClick={() => setShowRegisterForm(true)}>+ Nuevo Cliente</button>
             </div>
           </div>
           <div className="menu-matriz">
